@@ -1,0 +1,264 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(147, 158, 168);
+}
+
+.header-container{
+    display: flex;  
+    position: relative;
+    top: 0; 
+    background-color: rgb(21, 21, 74); 
+    border: 2px solid;
+    width: 100vw;
+    overflow: auto;
+}
+
+h1{
+    padding: 20px;
+    color: white;
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    
+}
+
+.navbar{
+    position: absolute;
+    right: 0;
+    padding-right: 10px;
+    
+}
+
+nav a{
+    margin-left: 20px;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-container{
+        display: block;
+    }
+    .navbar{
+        position: fixed;
+        top: 0;
+    }
+    nav a{
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+#contact{
+    background-color: rgb(21, 21, 74);
+    width: 100%;
+    height: auto;
+    color: white;
+    padding: 40px;
+}
+
+.contact-container{
+    display: flex;
+}
+
+
+.phone, .email{
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+
+.content{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 174);
+    padding: 50px;
+}
+
+.content:hover{
+    box-shadow: 0px 0px 20px rgba(21, 21, 74, 0.8);
+    transition: 0.5s ease;
+}
+
+.content p{
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+
+/* Admission */
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+fieldset{
+    display: flex;
+    border: 2px solid;
+    width: 80%;
+    font-size: 1.2em;
+
+}
+
+fieldset input{
+   width: 100%;
+   height: 30px;
+   font-size: 1.2em;
+}
+
+
+.admission-form{
+    display: flex;
+    justify-content: center;
+
+}
+
+.submit-btn{
+    width: 600px;
+    height: 30px;
+    margin-top: 10px;
+    font-size: 1.2em;
+    background-color: rgb(37, 118, 40);
+    color: white;
+}
+
+.submit-btn:hover{
+    background-color: rgb(56, 255, 56);
+    color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .submit-btn{
+        width: 100px;
+        /* background-color: rgb(37, 118, 40); */
+    }
+}
+
+
+.slider-wrapper{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    z-index: -1;
+}
+
+.slider{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    animation: slide 12s ease-in-out 2s infinite normal;
+}
+
+.slider img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+   
+}
+
+@keyframes slide {
+    0%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.info-container{
+    display: flex;
+    justify-content: center;
+}
+
+.info{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.info-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 350px;
+    border: 2px solid;
+    background-color: rgb(21, 21, 74);
+    overflow: hidden;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+.info-card img{
+    object-fit: cover;
+}
+
+.info-card:hover{
+    transform: scale(1.01);
+    box-shadow: 0px 0px 60px rgba(255, 255, 174, 0.8);
+    transition: 0.5s ease-in-out;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .info-card{
+        width: 200px;
+    }
+}
+
+.social-media{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-media a{
+    font-size: 2em;
+    background-color: white;
+    border-radius: 20%;
+    padding: 10px;
+    margin-bottom: 60px;
+}
+
+h2{
+    font-size: 3em;
+}
+
+.info a{
+    text-decoration: none;
+}
